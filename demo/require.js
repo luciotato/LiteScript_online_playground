@@ -2,7 +2,7 @@
 // equivalent to node's 'require'
 //  http://github.com/luciotato
 function require(url){
-    url='/compiled/'+url;
+    url='demo/compiled/'+url;
     if (url.toLowerCase().substr(-3)!=='.js') url+='.js'; // to allow loading without js suffix;
 	if (!require.cache) require.cache=[]; //init cache
     var exports=require.cache[url]; //get from cache
