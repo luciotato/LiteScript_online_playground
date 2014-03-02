@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "httpGet.js",
+  "sourceRoot": "",
+  "sources": [
+    "httpGet.lite.md"
+  ],
+  "names": [],
+  "mappings": ";;AACI;;;AAEI;;AACI;;;;AAGJ;AACA;AACA;AACA;AACA;;AAEA;AACA;;;;;AAGJ;;;AAGI;AACA;;AACA;;;AAEI;AACI;AACA;;AACA;;AACA;;;;AAGA;;;;;;AAEZ;AACI;AACA;;;;;AAGJ;;AAEI;;AAEA;AACA;;;AAEA;AACI;;;;AAEA;;;;AAEJ;;AACA"
+}

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "BareWebServer.js",
+  "sourceRoot": "",
+  "sources": [
+    "BareWebServer.lite.md"
+  ],
+  "names": [],
+  "mappings": ";;;;;;;AAMI;;;;;;;;;AAMA;;;;;;;;;;;;;;;;AAaA;;;;;;;AAKI;;;;AAIA;;;AAEA;;AAEA;;AAEA;;AAEA;;AAOA;;AAEA;;;;;;;AAGA;;;;AAGA;;;;AAIA;;;;;AAIA;;AAEI;;;;;;;;;AAMA;;AAEI;;;;AAGA;;;;;AAER;;AACI;;;;;;;;AAKJ;;;;;;;;;;;;;;;;;AASA;;;;;;;;;AAGA;;;;;;;;AAGA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAyCA;;AAEA;;;;;AAIA;AACI;;;;AAEA;;;;;AAIJ;;AACA;AACI;AACA;;;AAEJ;;;;;;;AAKA;;AAEE;;;;AAGA;;;AAEF;AACI;AACA;;AACA;;AACA;AACA;;;;;AAEF;;AAEF;;;AAEA;AACI;;;;;AAEA;;AACI;;;;AAER;;AAEA;;AAEA;;;;;;AAIE;;AAEF;AACA;;;;;AAGE;;AAEF;AACA;AACA"
+}

@@ -1,0 +1,1 @@
+lite -browser -compile makeInterface -o . $*

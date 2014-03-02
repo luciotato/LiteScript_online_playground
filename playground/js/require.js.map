@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "require.js",
+  "sourceRoot": "",
+  "sources": [
+    "require.lite.md"
+  ],
+  "names": [],
+  "mappings": ";;;;;AAII;;;AAEI;AACI;AACA;AACA;AACA;;;;;AAGA;;;;AAGA;;;;;;AAIJ;;;;AAEA;;;AAEA;AACA;;AACA;;AACI;;;;;;AAII;AACI;AACA;AACA;AACA;;AACA;;AACA;;;;;AAIA;AACI;AACA;AACA;;AACA;;AACA;;;;;AAIJ;;;AAGA;;;AAGA;AACA;AACA;AACA;;;;AAIA;;;;AAEZ;AACA;;;;;;;;;;;AASJ;AACI"
+}

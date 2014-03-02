@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>LiteScript Language Online Playground</title>
+
+    <!-- external sources-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!--<script src="https://rawgithub.com/ajaxorg/ace-builds/master/src-noconflict/ace.js"></script>-->
+
+    <!-- local copies -->
+    <!-- <script src="/js/local_copies/ajax.googleapis.com/jquery.js"></script> -->
+    <script src="/js/local_copies/rawgithub.com/ace.js"> </script>
+
+    <!-- -->
+    <script src="/js/require.js"></script> 
+    <!-- -->
+    <script src="/js/httpGet.js"></script>
+    <script src="/js/online.js"></script>
+    <!-- -->
+    <link rel="stylesheet" href="/css/online.css" type="text/css" />
+</head>
+
+<body>
+
+<div class=source-header>
+  LiteScript code --> javascript code  
+  <div style="float:right;margin-right:2%">
+        See the project on <a href=http://github.com/luciotato/LiteScript>Github</a>
+  </div>
+</div>
+
+<div id=run>
+    <table>
+        <tr class=header>
+            <td>LiteScript code<div id=status></div> </td>
+            <td>js code</td>
+        </tr>
+        <tr class=result>
+            <td><div id="Compare-Lite" class=editors></div></td>
+            <td><div id="Compare-js" class=editors></div></td>
+        </tr>
+    </table>
+</div>
+
+<div class=botonera>
+    <button onClick=loadSample('Literate.lite.md')>Literate</button>
+    <button onClick=loadSample('FreeForm.lite.md')>Free form</button>
+    <button onClick=loadSample('For.lite.md')>For</button>
+    <button onClick=loadSample('Loops.lite.md')>Loops</button>
+    <button onClick=loadSample('Switch.lite.md')>Switch</button>
+    <button onClick=loadSample('Case.lite.md')>Case</button>
+    <button onClick=loadSample('Preprocessor.lite.md')>Lite Preprocessor</button>
+    <button onClick=loadSample('Class.lite.md')>Class</button>
+    <button onClick=loadSample('Prototype.lite.md')>Prototypal</button>
+    <button onClick=loadSample('AppendTo.lite.md')>Append To</button>
+    <button onClick=loadSample('Shims.lite.md')>Shims</button>
+    <button style="visibility:hidden">take some space</button>
+    <button onClick=run()>&gt&gt  Compile &gt&gt</button>
+    <div id="version"></div>
+</div>
+
+<script>
+    OnLine_Main();
+</script>
+
+</body>
+</html>
