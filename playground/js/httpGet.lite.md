@@ -11,6 +11,7 @@
         xmlhttp.onload = Local_OnLoad; //default, next fn
         xmlhttp.onerror = Local_OnError;
         //xmlhttp.setRequestHeader('content-type', 'applicattion/json');
+        console.log 'GET', url
         xmlhttp.open 'GET', url, true
         xmlhttp.send
     

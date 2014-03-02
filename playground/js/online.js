@@ -90,7 +90,7 @@
    function loadSample(fname, callback){
 
        loadedFname = fname;
-       loadFile('examples/' + fname, function (err, data){
+       loadFile('./examples/' + fname, function (err, data){
            //if err, return
            if (err) {
                return};
@@ -178,41 +178,48 @@
 
        document.getElementById('status').textContent = fileName;
 
-       $.ajax({url: fileName, success: function (data){
 
-                   data = data.replace('\r', ''); // remove CR from windows-edited files
+//        $.ajax({
 
-                   CompareOrig_ed.setValue(data);
+//            url: fileName
 
-                   CompareOrig_ed.clearSelection();
-                   CompareOrig_ed.scrollToLine(0);
+//            success: function (data:string)
 
-                   //if callback, callback(null,data);
-                   if (callback) {
-                       callback(null, data)};
-           }, error: function (jqxhr, textStatus, errorThrown){
-                    //global declare alert
-                    //declare valid jqxhr.responseText
-                   alert(jqxhr.responseText);
+//                    data = data.replace('\r',''); // remove CR from windows-edited files
 
-                   //if callback, callback(jqxhr);
-                   if (callback) {
-                       callback(jqxhr)};
-           }});
+//                    CompareOrig_ed.setValue(data);
+
+//                    CompareOrig_ed.clearSelection();
+//                    CompareOrig_ed.scrollToLine(0);
+
+//                    if callback, callback(null,data);
+
+//            error: function (jqxhr, textStatus, errorThrown)
+//                    global declare alert
+//                    declare valid jqxhr.responseText
+//                    alert jqxhr.responseText
+
+//                    if callback, callback(jqxhr);
+//         })
+
+       httpGet(fileName, function (err, data){
+
+               //if err and no data, data=err.toString();
+               if (err && !data) {
+                   data = err.toString()};
+               data = data.replace('\r', ''); // remove CR from windows-edited files
+
+               CompareOrig_ed.setValue(data);
+
+               CompareOrig_ed.clearSelection();
+               CompareOrig_ed.scrollToLine(0);
+
+               //if callback, callback(err,data);
+               if (callback) {
+                   callback(err, data)};
+       });
    };
 
-
-//        httpGet fileName, function(err,data:string)
-
-//                if err and no data, data=err.toString();
-//                data = data.replace('\r',''); // remove CR from windows-edited files
-
-//                CompareOrig_ed.setValue(data);
-
-//                CompareOrig_ed.clearSelection();
-//                CompareOrig_ed.scrollToLine(0);
-
-//                if callback, callback(err,data);
 
    //function mkEditor(divName) returns ace.Editor
    function mkEditor(divName){

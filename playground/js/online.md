@@ -73,7 +73,7 @@ MAIN
     function loadSample(fname,callback) 
 
         loadedFname = fname
-        loadFile 'examples/'+fname, function(err,data)
+        loadFile './examples/'+fname, function(err,data)
             if err, return
             run
 
@@ -143,6 +143,7 @@ MAIN
 
         document.getElementById('status').textContent=fileName;
         
+/*
         $.ajax({
 
             url: fileName
@@ -165,8 +166,8 @@ MAIN
 
                     if callback, callback(jqxhr);
          })
+*/
 
-/*
         httpGet fileName, function(err,data:string)
 
                 if err and no data, data=err.toString();
@@ -178,7 +179,7 @@ MAIN
                 CompareOrig_ed.scrollToLine(0);
 
                 if callback, callback(err,data);
-*/
+
 
     function mkEditor(divName) returns ace.Editor
 
