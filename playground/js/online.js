@@ -178,24 +178,41 @@
 
        document.getElementById('status').textContent = fileName;
 
-       httpGet(fileName, function (err, data){
+       $.ajax({url: fileName, success: function (data){
 
-               //if err and no data, data=err.toString();
-               if (err && !data) {
-                   data = err.toString()};
-               data = data.replace('\r', ''); // remove CR from windows-edited files
+                   data = data.replace('\r', ''); // remove CR from windows-edited files
 
-               CompareOrig_ed.setValue(data);
+                   CompareOrig_ed.setValue(data);
 
-               CompareOrig_ed.clearSelection();
-               CompareOrig_ed.scrollToLine(0);
+                   CompareOrig_ed.clearSelection();
+                   CompareOrig_ed.scrollToLine(0);
 
-               //if callback, callback(err,data);
-               if (callback) {
-                   callback(err, data)};
-       });
+                   //if callback, callback(null,data);
+                   if (callback) {
+                       callback(null, data)};
+           }, error: function (jqxhr, textStatus, errorThrown){
+                    //global declare alert
+                    //declare valid jqxhr.responseText
+                   alert(jqxhr.responseText);
+
+                   //if callback, callback(jqxhr);
+                   if (callback) {
+                       callback(jqxhr)};
+           }});
    };
 
+
+//        httpGet fileName, function(err,data:string)
+
+//                if err and no data, data=err.toString();
+//                data = data.replace('\r',''); // remove CR from windows-edited files
+
+//                CompareOrig_ed.setValue(data);
+
+//                CompareOrig_ed.clearSelection();
+//                CompareOrig_ed.scrollToLine(0);
+
+//                if callback, callback(err,data);
 
    //function mkEditor(divName) returns ace.Editor
    function mkEditor(divName){

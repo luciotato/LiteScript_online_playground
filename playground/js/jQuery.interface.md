@@ -2,21 +2,24 @@
     public var $ = jQuery
 
     public class jQuery 
-        constructor ( selector, context ) 
-        method init ( selector, context, rootjQuery ) 
-        
+
         properties
             jquery:string #version number
             selector:string
             length:number
 
+        constructor ( selector, context ) 
+        method init ( selector, context, rootjQuery ) 
+        
         method acceptData( elem ) 
         method access( elems, fn, key, value, chainable, emptyGet, raw ) 
+
         method add( selector, context ) 
         method addBack( selector ) 
         method addClass( value ) 
         method after() 
-        method ajax( url, options ) 
+
+        method ajax (url,options) 
         method ajaxComplete( fn )
         method ajaxError( fn )
         method ajaxPrefilter( dataTypeExpression, func ) 

@@ -143,6 +143,30 @@ MAIN
 
         document.getElementById('status').textContent=fileName;
         
+        $.ajax({
+
+            url: fileName
+
+            success: function (data:string)
+
+                    data = data.replace('\r',''); // remove CR from windows-edited files
+
+                    CompareOrig_ed.setValue(data);
+
+                    CompareOrig_ed.clearSelection();
+                    CompareOrig_ed.scrollToLine(0);
+
+                    if callback, callback(null,data);
+
+            error: function (jqxhr, textStatus, errorThrown)
+                    global declare alert
+                    declare valid jqxhr.responseText
+                    alert jqxhr.responseText
+
+                    if callback, callback(jqxhr);
+         })
+
+/*
         httpGet fileName, function(err,data:string)
 
                 if err and no data, data=err.toString();
@@ -154,7 +178,7 @@ MAIN
                 CompareOrig_ed.scrollToLine(0);
 
                 if callback, callback(err,data);
-
+*/
 
     function mkEditor(divName) returns ace.Editor
 

@@ -52,7 +52,7 @@
        }
        
        else {
-                //console.log('REQUIRE',url);
+               console.log('REQUIRE', url);
                //try
                try{
                    var moduleExports = {};

@@ -11,7 +11,7 @@
        var xmlhttp = create_HttpRequest();
         //declare valid xmlhttp.data_callback
        xmlhttp.data_callback = callback; //store callback here
-       xmlhttp.onload = Local_OnLoad; //default, es la fn que sigue
+       xmlhttp.onload = Local_OnLoad; //default, next fn
        xmlhttp.onerror = Local_OnError;
         //xmlhttp.setRequestHeader('content-type', 'applicattion/json');
        xmlhttp.open('GET', url, true);

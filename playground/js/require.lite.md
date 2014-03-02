@@ -36,7 +36,7 @@ add js suffix it it is not there
             do nothing //console.log('CACHED',url);
         
         else  //not cached
-                //console.log('REQUIRE',url);
+                console.log('REQUIRE',url);
                 try 
                     var moduleExports = {};
                     var X=new XMLHttpRequest();
