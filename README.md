@@ -4,7 +4,7 @@ LiteScript Online Playground!
 <a href=http://rawgithub.com/luciotato/litescript_online_playground/master/playground/index.html target=_blank>
 check it HERE!</a>
 </h4>
-href=http://rawgithub.com/luciotato/litescript_online_playground/master/demo.html
+master/playground/index.html
 
 This is an online test for LitesScript Language: 
 https://github.com/ltato/LiteScript
