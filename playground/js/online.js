@@ -80,7 +80,7 @@
        CompareOrig_ed = mkEditor("Compare-Lite");
        CompareJs_ed = mkEditor("Compare-js");
 
-       loadSample('Literate.lite');
+       loadSample('Literate.html');
    };
 
    //end function
