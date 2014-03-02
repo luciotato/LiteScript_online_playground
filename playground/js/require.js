@@ -5,21 +5,32 @@
    //public function require(url)
    function require(url){
 
-       //if url.slice(0,2) is './'
-       if (url.slice(0, 2) === './') {
-            //declare valid this.uri #when called recursively
-           var caller = this.uri || document.location.href;
-           var cwd = caller.slice(0, caller.lastIndexOf('/') + 1);
-           url = cwd + url.slice(2);
-       }
-       
-       else if ((url.slice(0, 2) === '/')) {
-           //do nothing
-           null;
+        //declare valid this.uri
+
+       //if no this.uri #called from online.js in main web page
+       if (!this.uri) {// #called from online.js in main web page
+            //# remove ../ from ../lib, since HTTP GET is relative from host root
+            //# not from online.js location (/js/online.js)
+           url = url.slice(3);
        }
        
        else {
-           url = require.globalPath + url;
+
+           //if url.slice(0,2) is './'
+           if (url.slice(0, 2) === './') {
+               var caller = this.uri;
+               var cwd = caller.slice(0, caller.lastIndexOf('/') + 1);
+               url = cwd + url.slice(2);
+           }
+           
+           else if ((url.slice(0, 2) === '/')) {
+               //do nothing
+               null;
+           }
+           
+           else {
+               url = require.globalPath + url;
+           };
        };
 
 //add js suffix it it is not there
@@ -94,19 +105,20 @@
 //for the module in ./node_modules, then ../../node_modules... then NODES_PATH, etc.
 //If you make a require() from the browser and required file does not starts with ./ or ..
 //this require() will prepend *require.globalPath* to try to get the resource.
-//Default is '/node_modules/'
+//Default is 'lib/'
 
    //append to namespace require
    
         //properties
             //cache
-            //globalPath = '/node_modules/' //default for node.js node_modules global search
-       require.globalPath='/node_modules/';
+            //globalPath = 'lib/' //default for node.js node_modules global search
+       require.globalPath='lib/';
        
 
 
 
 ///- END REQUIRE FN
+
 
 
 //Compiled by LiteScript compiler v0.6.0, source: /home/ltato/LiteScript_online_playground/playground/js/require.lite.md

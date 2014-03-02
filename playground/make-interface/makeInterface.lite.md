@@ -20,10 +20,10 @@ setup environment
 
     global declare httpGet
 
-    import log from '../lib/log'
+    //import log from '../lib/log'
     
-    declare valid log.options.storeMessages
-    log.options.storeMessages = true;
+    //declare valid log.options.storeMessages
+    //log.options.storeMessages = true;
 
     declare on Error
         controled, stack
@@ -39,11 +39,11 @@ emulate node's 'process'
 get Compiler
 
 
-    import LiteScript from '../lib/Compiler'
-    var compileOptions = {extraComments:true};
+    //import LiteScript from '../lib/Compiler'
+    //var compileOptions = {extraComments:true};
 
-    declare valid LiteScript.version
-    declare valid LiteScript.compile
+    //declare valid LiteScript.version
+    //declare valid LiteScript.compile
 
         
 MAIN
@@ -51,7 +51,7 @@ MAIN
 
     function main()
 
-        document.getElementById("version").innerHTML = "v#{LiteScript.version}"
+        //document.getElementById("version").innerHTML = "v#{LiteScript.version}"
 
         CompareOrig_ed = mkEditor("Compare-Lite");
 

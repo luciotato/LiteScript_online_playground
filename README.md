@@ -4,9 +4,9 @@ LiteScript Online Playground!
 <a href=http://rawgithub.com/luciotato/litescript_online_playground/master/playground/index.html target=_blank>
 check it HERE!</a>
 </h4>
-master/playground/index.html
+[master/playground/index.html]
 
-This is an online test for LitesScript Language: 
+This is an online test for LiteScript Language: 
 https://github.com/ltato/LiteScript
 
 You can also clone this repository and run the server locally:
@@ -15,7 +15,9 @@ You can also clone this repository and run the server locally:
     cd LiteScript_online_playground/webServer
     node app
 
-The Bare WebServer and the playground are written in LiteScript.
+The [Bare WebServer](webServer/src/BareWebServer.lite.md) 
+and the playground are written in LiteScript.
+
 To alter and recompile: 
 
     sudo npm install -g litescript

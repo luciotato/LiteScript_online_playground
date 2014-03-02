@@ -367,6 +367,7 @@ Window, Document, Element, Node, Event, XMLHttpRequest, CSSStyle
             textContent:string
             title:string
             translate:boolean
+            value
             webkitdropzone:string
             webkitPseudo:string
             webkitShadowRoot:object

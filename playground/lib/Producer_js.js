@@ -569,7 +569,7 @@
        
          //if varDecl.assignedValue #is not valid to assign to .prototype. - creates subtle errors later
          if (varDecl.assignedValue) {// #is not valid to assign to .prototype. - creates subtle errors later
-           //if prefix instance of Array and prefix[1] and prefix[1] isnt '.', .throwError 'cannot assign values to instance properties in "Append to"' //+ JSON.stringify(prefix)
+           //if prefix instance of Array and prefix[1] and prefix[1] isnt '.', .throwError 'cannot assign values to instance properties in "Append to"'
            if (prefix instanceof Array && prefix[1] && prefix[1] !== '.') {
                this.throwError('cannot assign values to instance properties in "Append to"')};
            this.out('    ', prefix, varDecl.name, "=", varDecl.assignedValue, ";", NL);

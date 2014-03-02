@@ -1,5 +1,8 @@
-//Compiled by LiteScript compiler v0.4.0, source: /home/ltato/LiteScript/util/src/Args.lite.md//constructor
-   function Args(argv){
+   //constructor
+    function Args(argv){
+     //     properties
+        //lastIndex
+
        var arr = argv.slice(2); //remove 'node lite' from command line arguments
         //declare valid arr.__proto__
        arr.__proto__ = Args.prototype; //convert arr:Array into arr:Args:Array
@@ -7,8 +10,6 @@
     };
    // Args (extends|super is) Array
    Args.prototype.__proto__ = Array.prototype;
-     //     properties
-        //lastIndex
 
     //method option(short,argName)
     Args.prototype.option = function(short, argName){
@@ -59,6 +60,9 @@
    //end class Args
 
 
-//## Export is class Args
 
-   module.exports = Args;
+
+module.exports=Args;
+
+//Compiled by LiteScript compiler v0.6.0, source: /home/ltato/LiteScript/util/src/Args.lite.md
+//# sourceMappingURL=Args.js.map

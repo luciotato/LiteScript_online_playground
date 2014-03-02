@@ -165,6 +165,7 @@
 
 //Initialize module vars
 
+       NameDeclaration.allOfThem = [];
        nameAffinity = new NameDeclaration('Name Affinity');// # project-wide name affinity for classes
 
 //Now, run passes on the AST

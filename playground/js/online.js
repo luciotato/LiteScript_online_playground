@@ -90,7 +90,7 @@
    function loadSample(fname, callback){
 
        loadedFname = fname;
-       loadFile('/examples/' + fname, function (err, data){
+       loadFile('examples/' + fname, function (err, data){
            //if err, return
            if (err) {
                return};
@@ -165,11 +165,6 @@
        CompareJs_ed.scrollToLine(0);
    };
 
-//    }catch(ex){
-//        console.trace();
-//        addRun("ERR: " + ex.message);
-//    }
-//}
 
    //function loadFile(fileName, callback)
    function loadFile(fileName, callback){
@@ -283,6 +278,7 @@
 //                  }
 //                );
 //    
+
 
 
 

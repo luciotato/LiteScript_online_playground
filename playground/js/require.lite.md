@@ -4,18 +4,26 @@
 
     public function require(url)
 
-        if url.slice(0,2) is './'
-            declare valid this.uri #when called recursively
-            var caller:string = this.uri or document.location.href
-            var cwd = caller.slice(0,caller.lastIndexOf('/')+1)
-            url = cwd + url.slice(2);
+        declare valid this.uri 
 
-        else if (url.slice(0,2) is '/') 
-            do nothing
+        if no this.uri #called from online.js in main web page
+            # remove ../ from ../lib, since HTTP GET is relative from host root
+            # not from online.js location (/js/online.js)
+            url = url.slice(3)
 
-        else  // no ./ or /, is node.js 'global' search on node_modules
-            url = require.globalPath + url;
-      
+        else
+        
+            if url.slice(0,2) is './'
+                var caller:string = this.uri
+                var cwd = caller.slice(0,caller.lastIndexOf('/')+1)
+                url = cwd + url.slice(2);
+
+            else if (url.slice(0,2) is '/') 
+                do nothing
+
+            else  // no ./ or /, is node.js 'global' search on node_modules
+                url = require.globalPath + url;
+              
 add js suffix it it is not there
 
         if url.toLowerCase().substr(-3) !== '.js', url+='.js'; 
@@ -71,12 +79,12 @@ When required module in node.js does not starts with ./ or .., node.js starts lo
 for the module in ./node_modules, then ../../node_modules... then NODES_PATH, etc.
 If you make a require() from the browser and required file does not starts with ./ or ..
 this require() will prepend *require.globalPath* to try to get the resource.
-Default is '/node_modules/'
+Default is 'lib/'
 
     append to namespace require
         properties 
             cache 
-            globalPath = '/node_modules/' //default for node.js node_modules global search
+            globalPath = 'lib/' //default for node.js node_modules global search
 
 
 ///- END REQUIRE FN

@@ -73,7 +73,7 @@ MAIN
     function loadSample(fname,callback) 
 
         loadedFname = fname
-        loadFile '/examples/'+fname, function(err,data)
+        loadFile 'examples/'+fname, function(err,data)
             if err, return
             run
 
@@ -131,11 +131,6 @@ MAIN
         CompareOrig_ed.scrollToLine(0);
         CompareJs_ed.scrollToLine(0);
 
-//    }catch(ex){
-//        console.trace();
-//        addRun("ERR: " + ex.message);
-//    }
-}
 
     function loadFile(fileName, callback) 
 

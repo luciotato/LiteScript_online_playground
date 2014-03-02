@@ -19,11 +19,10 @@
 
     //global declare httpGet
 
-   //import log from '../lib/log'
-   var log = require('./../lib/log');
+    //import log from '../lib/log'
 
     //declare valid log.options.storeMessages
-   log.options.storeMessages = true;
+    //log.options.storeMessages = true;
 
     //declare on Error
         //controled, stack
@@ -45,9 +44,8 @@
 //get Compiler
 
 
-   //import LiteScript from '../lib/Compiler'
-   var LiteScript = require('./../lib/Compiler');
-   var compileOptions = {extraComments: true};
+    //import LiteScript from '../lib/Compiler'
+    //var compileOptions = {extraComments:true};
 
     //declare valid LiteScript.version
     //declare valid LiteScript.compile
@@ -59,7 +57,7 @@
    //function main()
    function main(){
 
-       document.getElementById("version").innerHTML = "v" + LiteScript.version;
+        //document.getElementById("version").innerHTML = "v#{LiteScript.version}"
 
        CompareOrig_ed = mkEditor("Compare-Lite");
    };
@@ -529,6 +527,7 @@
        String.prototype.endsWith = function(s){
           return this.substr(-s.length) === s;
        };
+
 
 
 

@@ -1,4 +1,3 @@
-//Compiled by LiteScript compiler v0.4.0, source: /home/ltato/LiteScript/util/src/lite-cli.lite.md
 //## This is the command line interface to LiteScript Compiler
 
    //global import path,fs
@@ -8,7 +7,9 @@
    var Args = require('./Args');
    var fsUtil = require('./fsUtil');
 
-//## defaults, module vars
+//## usage, module vars
+
+   var usage = 'Usage:\n> lite -compile dir/mainModule [options]\n\nThis command will launch the LiteScript Compiler on dir/mainModule\n\noptions are:\n-c, -compile *dir/mainModule*: main module to compile\n-o *dir*: select output dir. Default is \'.\'\n-b, -browser: compile for a browser environment (window instead of global, no process, etc)\n-v, -verbose *level*: verbose level, default is 1 (0-2)\n-w, -warning *level*: warning level, default is 1 (0-1)\n\nAdvanced options:\n-s, -single: compile single file. do not follow import/require() calls\n-nm, -nomap: do not generate sourcemap\n-noval, -novalidation: skip name validation\n-u, -use *v0.6*: select LiteScript Compiler Version to use\n-d, -debug: enable full compiler debug log file at \'out/debug.log\'';
 
    var color = {
            normal: "\x1b[39;49m", 
@@ -18,9 +19,7 @@
            };
 
 
-   var usage = 'Usage:\n> lite -compile dir/mainModule [options]\n\nThis command will launch the LiteScript Compiler on dir/mainModule\n\noptions are:\n-c, -compile *dir/mainModule*: main module to compile\n-o *dir*: select output dir. Default is \'out/debug/\'\n-b, -browser: compile for a browser environment (window instead of global, no process, etc)\n-v, -verbose *level*: verbose level, default is 1 (0-2)\n-w- -warning *level*: warning level, default is 1 (0-1)\n\nAdvanced options:\n-s, -single: compile single file. do not follow import/require() calls\n-noval, -novalidation: skip name validation\n-u, -use *v0.4*: select LiteScript Compiler Version to use\n-d, -debug: enable full compiler debug log file at \'out/debug.log\'';
-
-   //export function main
+   //public function main
    function main(){
 
 //Get & process command line arguments
@@ -34,13 +33,11 @@
        ;
 
        var defaultVerbose = 1;
-       var defaultOutDir = 'out'; //output dir
 
 //Check for --help
 
        //if args.option('h','help')
        if (args.option('h', 'help')) {
-           //print usage
            console.log(usage);
            process.exit(0);
        };
@@ -52,7 +49,6 @@
            compileAndRun = true;
            compileAndRunParams = args.splice(args.lastIndex);// #remove params after --run
            defaultVerbose = 0;
-           defaultOutDir = '.';
        };
 
 //get compiler version to --use
@@ -62,11 +58,12 @@
 //Check for other options
 
        var options = {
-           outDir: path.resolve(args.value('o') || defaultOutDir), 
+           outDir: path.resolve(args.value('o') || '.'), 
            verbose: args.value('v', "verbose") || defaultVerbose, 
            warning: args.value('w', "warning"), 
            debug: args.option('d', "debug"), 
            skip: args.option('noval', "novalidation"), 
+           nomap: args.option('nm', "nomap"), 
            single: args.option('s', "single"), 
            browser: args.option('b', "browser")
            };
@@ -96,13 +93,9 @@
         //console.log(process.cwd());
        //if options.verbose
        if (options.verbose) {
-           //print '\n\ncompiler path: #{compilerPath}'
            console.log('\n\ncompiler path: ' + compilerPath);
-           //print 'compiler options: #{JSON.stringify(options)}'
            console.log('compiler options: ' + (JSON.stringify(options)));
-           //print 'cwd: #{process.cwd()}'
            console.log('cwd: ' + (process.cwd()));
-           //print 'compile#{compileAndRun?" and run":""}: #{mainModuleName}'
            console.log('compile' + (compileAndRun ? " and run" : "") + ': ' + mainModuleName);
        };
 
@@ -149,10 +142,8 @@
                    fsUtil.mkPathToFile(outFile);
                    fs.writeFileSync(outFile, compiledCode);
                    var exec = require('child_process').exec;
-                   //print "***LAUNCHING NODE in DEBUG MODE***"
                    console.log("***LAUNCHING NODE in DEBUG MODE***");
                    var cmd = 'node --debug-brk ' + outFile + ' ' + (compileAndRunParams.join(" "));
-                   //print cmd
                    console.log(cmd);
                    exec(cmd, function (error, stdout, stderr){
                                         //declare error:Error
@@ -247,3 +238,7 @@
    //export
    module.exports.main=main;
 
+
+
+//Compiled by LiteScript compiler v0.6.0, source: /home/ltato/LiteScript/util/src/lite-cli.lite.md
+//# sourceMappingURL=lite-cli.js.map

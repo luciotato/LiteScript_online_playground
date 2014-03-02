@@ -20,9 +20,6 @@ Module variables
         '.ico':   "binary/image"
         
 
-Module Vars
------------
-
     var 
         wwwRoot:string
         appHandler:function
