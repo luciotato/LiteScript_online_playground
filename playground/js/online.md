@@ -73,13 +73,11 @@ MAIN
     function loadSample(fname,callback) 
 
         loadedFname = fname
-        loadFile './examples/'+fname, function(err,data)
+        loadExample fname, function(err,data)
             if err, return
             run
 
     function run
-
-//    try{
 
         var liteSource = CompareOrig_ed.getValue();
 
@@ -132,9 +130,9 @@ MAIN
         CompareJs_ed.scrollToLine(0);
 
 
-    function loadFile(fileName, callback) 
+    function loadExample(fileName, callback) 
 
-//    syncEditors([CompareOrig_ed, CompareJs_ed],false);
+        //syncEditors([CompareOrig_ed, CompareJs_ed],false);
 
         CompareJs_ed.setValue("");
 
@@ -143,10 +141,9 @@ MAIN
 
         document.getElementById('status').textContent=fileName;
         
-/*
         $.ajax({
 
-            url: fileName
+            url: 'examples/html/'+fileName.replace(/\.lite\.md$/,".html") #hack: github won't serve .md from rawgithub
 
             success: function (data:string)
 
@@ -166,7 +163,7 @@ MAIN
 
                     if callback, callback(jqxhr);
          })
-*/
+/*
 
         httpGet fileName, function(err,data:string)
 
@@ -179,7 +176,7 @@ MAIN
                 CompareOrig_ed.scrollToLine(0);
 
                 if callback, callback(err,data);
-
+*/
 
     function mkEditor(divName) returns ace.Editor
 

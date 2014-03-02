@@ -80,7 +80,7 @@
        CompareOrig_ed = mkEditor("Compare-Lite");
        CompareJs_ed = mkEditor("Compare-js");
 
-       loadSample('Literate.html');
+       loadSample('Literate.lite.md');
    };
 
    //end function
@@ -90,7 +90,7 @@
    function loadSample(fname, callback){
 
        loadedFname = fname;
-       loadFile('./examples/' + fname, function (err, data){
+       loadExample(fname, function (err, data){
            //if err, return
            if (err) {
                return};
@@ -100,8 +100,6 @@
 
    //function run
    function run(){
-
-//    try{
 
        var liteSource = CompareOrig_ed.getValue();
 
@@ -166,10 +164,10 @@
    };
 
 
-   //function loadFile(fileName, callback)
-   function loadFile(fileName, callback){
+   //function loadExample(fileName, callback)
+   function loadExample(fileName, callback){
 
-//    syncEditors([CompareOrig_ed, CompareJs_ed],false);
+        //syncEditors([CompareOrig_ed, CompareJs_ed],false);
 
        CompareJs_ed.setValue("");
 
@@ -178,48 +176,41 @@
 
        document.getElementById('status').textContent = fileName;
 
+       $.ajax({url: 'examples/html/' + fileName.replace(/\.lite\.md$/, ".html"), success: function (data){
 
-//        $.ajax({
+                   data = data.replace('\r', ''); // remove CR from windows-edited files
 
-//            url: fileName
+                   CompareOrig_ed.setValue(data);
 
-//            success: function (data:string)
+                   CompareOrig_ed.clearSelection();
+                   CompareOrig_ed.scrollToLine(0);
 
-//                    data = data.replace('\r',''); // remove CR from windows-edited files
+                   //if callback, callback(null,data);
+                   if (callback) {
+                       callback(null, data)};
+           }, error: function (jqxhr, textStatus, errorThrown){
+                    //global declare alert
+                    //declare valid jqxhr.responseText
+                   alert(jqxhr.responseText);
 
-//                    CompareOrig_ed.setValue(data);
-
-//                    CompareOrig_ed.clearSelection();
-//                    CompareOrig_ed.scrollToLine(0);
-
-//                    if callback, callback(null,data);
-
-//            error: function (jqxhr, textStatus, errorThrown)
-//                    global declare alert
-//                    declare valid jqxhr.responseText
-//                    alert jqxhr.responseText
-
-//                    if callback, callback(jqxhr);
-//         })
-
-       httpGet(fileName, function (err, data){
-
-               //if err and no data, data=err.toString();
-               if (err && !data) {
-                   data = err.toString()};
-               data = data.replace('\r', ''); // remove CR from windows-edited files
-
-               CompareOrig_ed.setValue(data);
-
-               CompareOrig_ed.clearSelection();
-               CompareOrig_ed.scrollToLine(0);
-
-               //if callback, callback(err,data);
-               if (callback) {
-                   callback(err, data)};
-       });
+                   //if callback, callback(jqxhr);
+                   if (callback) {
+                       callback(jqxhr)};
+           }});
    };
 
+
+//        httpGet fileName, function(err,data:string)
+
+//                if err and no data, data=err.toString();
+//                data = data.replace('\r',''); // remove CR from windows-edited files
+
+//                CompareOrig_ed.setValue(data);
+
+//                CompareOrig_ed.clearSelection();
+//                CompareOrig_ed.scrollToLine(0);
+
+//                if callback, callback(err,data);
 
    //function mkEditor(divName) returns ace.Editor
    function mkEditor(divName){
