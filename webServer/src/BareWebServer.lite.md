@@ -27,7 +27,7 @@ Module variables
         appHandler:function
         server:http.Server
 
-### public function start( staticDir:string, aAppHandler:function, port) 
+### public function start ( staticDir: string, aAppHandler: function, port) 
 
 Start a web server 
 
@@ -81,7 +81,7 @@ else, If the request was not handled by the app, we check for static files
             response.error 503, e.message
 
 
-## Helper Classes declaring node's 'http' module strutures
+## Helper Classes declaring node's 'http' module structures
 
 ### public helper class Request extends http.IncomingMessage
 This are the added properties to [http.IncomingMessage] (http://nodejs.org/api/http.html#http_message_url)

@@ -2,9 +2,9 @@ LiteScript Online Playground!
 ==
 <h4>
 <a href=http://rawgithub.com/luciotato/litescript_online_playground/master/playground/index.html target=_blank>
-check it HERE!</a>
+click HERE: (master/playground/index.html)</a>
 </h4>
-[master/playground/index.html]
+
 
 This is an online test for LiteScript Language: 
 https://github.com/ltato/LiteScript
