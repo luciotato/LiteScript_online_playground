@@ -1,7 +1,7 @@
 
     public function httpGet(url, callback)
         
-        if (typeof callback isnt 'function') 
+        if typeof callback isnt 'function'
             fail with '2nd parameter should be callback fn(err,data)'
 
         //ajax get file

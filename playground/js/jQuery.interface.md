@@ -1,5 +1,5 @@
 
-    public var $ = jQuery
+    public var $:jQuery
 
     public class jQuery 
 
@@ -210,7 +210,7 @@
 
     append to namespace jQuery
         properties 
-            fn=jQuery.prototype
+            fn:jQuery
         class Event
             constructor new Event ( src, props ) 
             method isDefaultPrevented() 

@@ -1,3 +1,4 @@
+//Compiled by LiteScript compiler v0.6.1, source: /home/ltato/LiteScript_online_playground/playground/js/require.lite.md
 ///- simplified REQUIRE
 // equivalent -for the borwser- to node's 'require'
 //  http://github.com/luciotato
@@ -108,11 +109,10 @@
 //Default is 'lib/'
 
    //append to namespace require
-   
         //properties
             //cache
             //globalPath = 'lib/' //default for node.js node_modules global search
-       require.globalPath='lib/';
+           require.globalPath='lib/';
        
 
 
@@ -120,6 +120,4 @@
 ///- END REQUIRE FN
 
 
-
-//Compiled by LiteScript compiler v0.6.0, source: /home/ltato/LiteScript_online_playground/playground/js/require.lite.md
 //# sourceMappingURL=require.js.map

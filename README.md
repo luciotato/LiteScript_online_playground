@@ -1,8 +1,8 @@
 LiteScript Online Playground!
 ==
 <h4>
-<a href=http://rawgithub.com/luciotato/litescript_online_playground/master/playground/index.html target=_blank>
-click HERE: (master/playground/index.html)</a>
+<a href=http://luciotato.github.io/LiteScript_online_playground/playground/ target=_blank>
+click HERE: (http://luciotato.github.io/LiteScript_online_playground/playground/)</a>
 </h4>
 
 
