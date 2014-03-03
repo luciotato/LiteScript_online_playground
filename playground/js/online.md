@@ -130,7 +130,7 @@ MAIN
         CompareJs_ed.scrollToLine(0);
 
 
-    function loadExample(fileName, callback) 
+    function loadExample(fileName:string, callback) 
 
         //syncEditors([CompareOrig_ed, CompareJs_ed],false);
 

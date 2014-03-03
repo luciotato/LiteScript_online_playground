@@ -1,8 +1,10 @@
+//Compiled by LiteScript compiler v0.6.1, source: /home/ltato/LiteScript_online_playground/playground/js/httpGet.lite.md
+
    //public function httpGet(url, callback)
    function httpGet(url, callback){
 
-       //if (typeof callback isnt 'function')
-       if ((typeof callback !== 'function')) {
+       //if typeof callback isnt 'function'
+       if (typeof callback !== 'function') {
            //fail with '2nd parameter should be callback fn(err,data)'
            throw new Error('2nd parameter should be callback fn(err,data)');
        };
@@ -76,6 +78,4 @@
    };
 
 
-
-//Compiled by LiteScript compiler v0.6.0, source: /home/ltato/LiteScript_online_playground/playground/js/httpGet.lite.md
 //# sourceMappingURL=httpGet.js.map

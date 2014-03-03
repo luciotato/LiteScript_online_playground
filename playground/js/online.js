@@ -1,3 +1,4 @@
+//Compiled by LiteScript compiler v0.6.1, source: /home/ltato/LiteScript_online_playground/playground/js/online.md
 //Dependencies
 //-------------
 
@@ -16,10 +17,9 @@
    var global = window;
 
    //append to object window
-   
         //properties
             //process:
-       window.process={
+           window.process={
                exit: function (code){
                    //throw new Error('exit code '+code)
                    throw new Error('exit code ' + code);
@@ -56,7 +56,6 @@
 //----------
 
    //append to class String
-   
        //shim method startsWith(s:string)
        if (!String.prototype.startsWith)
        String.prototype.startsWith = function(s){
@@ -164,7 +163,7 @@
    };
 
 
-   //function loadExample(fileName, callback)
+   //function loadExample(fileName:string, callback)
    function loadExample(fileName, callback){
 
         //syncEditors([CompareOrig_ed, CompareJs_ed],false);
@@ -198,18 +197,12 @@
                        callback(jqxhr)};
            }});
    };
-
-
 //        httpGet fileName, function(err,data:string)
-
 //                if err and no data, data=err.toString();
 //                data = data.replace('\r',''); // remove CR from windows-edited files
-
 //                CompareOrig_ed.setValue(data);
-
 //                CompareOrig_ed.clearSelection();
 //                CompareOrig_ed.scrollToLine(0);
-
 //                if callback, callback(err,data);
 
    //function mkEditor(divName) returns ace.Editor
@@ -282,7 +275,7 @@
                    session1.setScrollTop(parseInt(scroll) || 0);
                  });
            };
-       }; // end for n
+       };//end for n
        
    };
 
@@ -296,6 +289,4 @@
 
 
 
-
-//Compiled by LiteScript compiler v0.6.0, source: /home/ltato/LiteScript_online_playground/playground/js/online.md
 //# sourceMappingURL=online.js.map
