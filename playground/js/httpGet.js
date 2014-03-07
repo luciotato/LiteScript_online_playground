@@ -1,4 +1,4 @@
-//Compiled by LiteScript compiler v0.6.1, source: /home/ltato/LiteScript_online_playground/playground/js/httpGet.lite.md
+//Compiled by LiteScript compiler v0.6.3, source: /home/ltato/LiteScript_online_playground/playground/js/httpGet.lite.md
 
    //public function httpGet(url, callback)
    function httpGet(url, callback){

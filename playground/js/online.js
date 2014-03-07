@@ -1,4 +1,4 @@
-//Compiled by LiteScript compiler v0.6.1, source: /home/ltato/LiteScript_online_playground/playground/js/online.md
+//Compiled by LiteScript compiler v0.6.3, source: /home/ltato/LiteScript_online_playground/playground/js/online.md
 //Dependencies
 //-------------
 
@@ -34,7 +34,7 @@
    log.options.storeMessages = true;
 
     //declare on Error
-        //controled, soft, stack
+        //controled, soft
 
 //import compiler
 
