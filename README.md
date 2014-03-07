@@ -7,7 +7,7 @@ click HERE: (http://luciotato.github.io/LiteScript_online_playground/playground/
 
 
 This is an online test for LiteScript Language: 
-https://github.com/ltato/LiteScript
+https://github.com/luciotato/LiteScript
 
 You can also clone this repository and run the server locally:
 
