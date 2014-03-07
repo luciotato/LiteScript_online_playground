@@ -27,7 +27,7 @@ set compiler log messages to memory
     log.options.storeMessages = true
 
     declare on Error
-        controled, soft, stack
+        controled, soft
     
 import compiler
 

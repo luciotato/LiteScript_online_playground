@@ -1,4 +1,4 @@
-//Compiled by LiteScript compiler v0.6.1, source: /home/ltato/LiteScript_online_playground/playground/js/require.lite.md
+//Compiled by LiteScript compiler v0.6.3, source: /home/ltato/LiteScript_online_playground/playground/js/require.lite.md
 ///- simplified REQUIRE
 // equivalent -for the borwser- to node's 'require'
 //  http://github.com/luciotato

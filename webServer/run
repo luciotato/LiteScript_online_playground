@@ -1,3 +1,3 @@
-cp -u ~/LiteScript/liteCompiler-v0.6.0/* ~/LiteScript_online_playground/playground/lib
-cp -u ~/LiteScript/source-v0.6.0/browser/*.js ~/LiteScript_online_playground/playground/lib
+cp -uv ~/LiteScript/devel/liteCompiler-v0.6/* ~/LiteScript_online_playground/playground/lib
+cp -uv ~/LiteScript/devel/source-v0.6/browser/*.js ~/LiteScript_online_playground/playground/lib
 node app
