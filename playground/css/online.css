@@ -8,6 +8,10 @@ body
     height:99%;
 }
 
+a:visited{
+    color: whitesmoke;
+}
+
 .source-header {
     height: 34px;
     width: 98%;
