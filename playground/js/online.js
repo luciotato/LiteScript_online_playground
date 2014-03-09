@@ -175,7 +175,7 @@
 
        document.getElementById('status').textContent = fileName;
 
-       $.ajax({url: 'examples/html/' + fileName.replace(/\.lite\.md$/, ".html"), success: function (data){
+       $.ajax({url: 'examples/' + fileName, success: function (data){
 
                    data = data.replace('\r', ''); // remove CR from windows-edited files
 
