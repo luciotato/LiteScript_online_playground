@@ -143,7 +143,8 @@ MAIN
         
         $.ajax({
 
-            url: 'examples/html/'+fileName.replace(/\.lite\.md$/,".html") #hack: github won't serve .md from rawgithub
+            //url: 'examples/html/'+fileName.replace(/\.lite\.md$/,".html") #hack: github won't serve .md from rawgithub
+            url: 'examples/'+fileName
 
             success: function (data:string)
 
