@@ -1,5 +1,5 @@
 ///- simplified REQUIRE 
-// equivalent -for the borwser- to node's 'require'
+// equivalent -for the browser- to node's 'require'
 //  http://github.com/luciotato
 
     public function require(url)
