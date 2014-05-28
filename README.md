@@ -5,8 +5,7 @@ LiteScript Online Playground!
 click HERE: (http://luciotato.github.io/LiteScript_online_playground/playground/)</a>
 </h4>
 
-
-This is an online test for LiteScript Language: 
+This is an online test for the LiteScript Language: 
 https://github.com/luciotato/LiteScript
 
 You can also clone this repository and run the server locally:
