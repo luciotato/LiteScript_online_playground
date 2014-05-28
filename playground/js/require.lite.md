@@ -1,6 +1,6 @@
 ///- simplified REQUIRE 
-// equivalent -for the borwser- to node's 'require'
-//  http://github.com/luciotato
+// browser equivalent for node's 'require'
+// http://github.com/luciotato
 
     public function require(url)
 
